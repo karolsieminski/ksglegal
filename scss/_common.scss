@@ -9,8 +9,8 @@ body {
 }
 
 .wrapper {
-    @media screen and (min-width: 1600px) {
-        padding: 0 15rem;
+    @media screen and (min-width: $tablet-size) {
+        padding: 0 6%;
     }
 }
 
@@ -40,7 +40,7 @@ body {
 
 .section-bar {
     width: 100%;
-
+    background-position: right;
     &__heading {
         color: $tile-text-color;
         padding: 2.5rem 0;
