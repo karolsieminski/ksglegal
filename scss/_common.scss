@@ -1,0 +1,111 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    @media screen and (min-width: 1600px) {
+        padding: 0 15rem;
+    }
+}
+
+.text-wrapper {
+    margin: 13rem 0;
+    width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 1rem 2.6rem;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border: 2px solid $btn-color;
+    color: $btn-color;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: $btn-color;
+    }
+}
+
+.section-bar {
+    width: 100%;
+
+    &__heading {
+        color: $tile-text-color;
+        padding: 2.5rem 0;
+        font-size: 4.6rem;
+        margin: 0;
+
+        @media screen and  (min-width: $tablet-size) and (max-width: $big-screen){
+            padding-left: 3rem;
+        }
+
+        @media screen and (max-width: $tablet-size){
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        &.wrapper {
+            @media screen and (min-width: 1600px) {
+                padding: 4rem 21rem;
+            }
+        }
+    }
+    &__heading--smaller {
+        background-color: $services-color;
+        width: 57.8rem;
+        text-align: right;
+        padding-right: 11rem;
+        box-sizing: border-box;
+    }
+}
+
+.section-text {
+    font-size: 1.6rem;
+    line-height: 3.3rem;    
+    color: $menu-text-colour;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.center {
+    margin: 4rem auto;
+    display: block;
+}
+
+
+.skills-list {
+    list-style-image: url('../../assets/uslugi_punkt.png');
+    list-style-position: outside;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: translateX(3rem);
+    justify-content: space-between;
+    
+    &--smaller {
+        margin: 8rem auto;
+        max-width: 70rem;
+        font-weight: bold;
+    }
+
+    &__item {
+        padding: 0.5rem 0;
+        flex-basis: 50%;
+        padding-left: 1rem;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,84 @@
+#news {
+    & > .section-bar {
+        background-image: url("../../assets/aktualnosci_naglowek_bg.png");
+    }
+}
+
+.articles-list {
+    list-style-type: none;
+    margin: 10rem auto;
+    max-width: 85rem;
+
+
+    @media screen and (max-width: $medium-screen){
+        padding: 1rem;
+    }
+
+    @media screen and (max-width: $tablet-size){
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    & hr {
+        border-color: rgba(255, 220, 220, 0.267);
+    }
+    
+    &-item {
+        position: relative;
+        margin: 4rem 0;
+
+        &::before {
+            position: absolute;
+            top: 0.5rem;
+            left: -6rem;
+            content: url("../../assets/aktualnosci_punkt.png");
+
+            @media screen and (max-width: $medium-screen){
+                display: none;
+            }
+        }
+
+        &__title {
+            margin: 0;
+        }
+    
+        &__date {
+            margin: 0.5rem 0;
+            color: $btn-color;
+            font-size: 1.3rem;
+        }
+    
+        &__text {
+            height: 16rem;
+            overflow: hidden;
+
+            &.expanded {
+                height: initial;
+            }
+            & > p {
+               text-align: justify;
+               line-height: 2.5;
+               letter-spacing: 1.5px;
+               word-spacing: 1rem;
+               font-size: 1.4rem;
+            }
+        }
+    }
+
+    .read-all {
+        margin-top: 8rem;
+        padding: 1.3rem 2.3rem;
+        font-size: 1.4rem;
+    }
+}
+
+.read-more-btn {
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $services-color;
+    background-color: transparent;
+    letter-spacing: 1.5px;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}

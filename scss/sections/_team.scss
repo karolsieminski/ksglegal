@@ -1,0 +1,274 @@
+#team > .section-bar {
+    background-image: url('../assets/zespol_naglowek_bg.png');
+}
+
+#team .skills-list {
+    @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+    }
+}
+
+.team-member {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 10rem auto;
+
+    @media screen and (max-width: $tablet-size) {
+        flex-direction: column;
+        margin:0;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $tablet-size) and (max-width: $medium-screen) {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 80%;
+    }
+
+    @media screen and (min-width: $medium-screen) and (max-width: $big-screen) {
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+
+    &__desc {
+        @media screen and (max-width: $tablet-size){
+            padding-top: 2rem;
+        }
+        p {
+            @media screen and (max-width: $tablet-size) {
+                display: none;
+            }
+        }
+
+        &.showed p {
+            display: block;
+        }
+
+        p:first-child {
+            @media screen and (max-width: $tablet-size) {
+                display: block;
+            }
+        }
+
+        & + .show-text-btn {
+            display: block;
+            @media screen and (min-width: $tablet-size) {
+                display: none;
+            }
+        }
+    }
+
+    & .skills-list__item:nth-child(n + 7) {
+        flex-basis: 100%;
+    }
+
+
+    &__col:first-child {
+        margin-right: 8%;
+
+        @media screen and (max-width: $big-screen) {
+            margin-right: 0;
+        }
+
+        & p {
+            text-align: justify;
+            font-size: 1.6rem;
+            line-height: 2.3;
+
+            @media screen and (max-width: $big-screen){
+                margin: 1rem auto;
+            }
+        }
+    }
+
+    &__cols-wrapper {
+        display: flex;
+        @media screen and (max-width: $big-screen) {         
+            flex-direction: column-reverse;
+        }  
+    }
+
+    
+
+    &__contact {
+
+        
+
+        @media screen and (max-width: $big-screen) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & img {
+            @media screen and (max-width: $big-screen) {
+                width: 50%;    
+            }
+        }
+        
+
+        & div {
+            @media screen and (max-width: $big-screen) {
+                flex-basis: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding-left: 8%;
+                box-sizing: border-box;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                padding-left: 0.4rem;
+            }
+
+            @media screen and (min-width: $small-screen) and (max-width: $small2-screen) {
+                padding-left: 0.1rem;
+            }
+        }
+
+        &--label {
+   
+            @media screen and (max-width: $big-screen){
+                font-size: 2.6rem;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 1.8rem;
+            }
+
+            & + p {
+                @media screen and (max-width: $small-screen) {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        & img {
+            margin-bottom: 2rem;
+        }
+
+        & p {
+            margin: 0rem;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        line-height: 1.3;
+        color: $menu-text-colour;
+
+        @media screen and (max-width: $big-screen) {
+            display: none;
+        }
+
+        &.smaller {
+            display: none;
+            @media screen and (max-width: $big-screen) {
+                display: flex;
+                width: 100% !important;
+                margin: 5rem 0 3rem;
+            }
+            
+            & div {
+                @media screen and (max-width: $big-screen) {
+                    margin: 0;
+                }
+            }
+        }
+
+        & div {
+            margin-left: 3rem;
+        }
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 3.5rem;    
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 2.5rem;
+        }
+    }
+
+    & img {
+        align-self: center;
+    }
+
+    &__job {
+        margin: 0;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    & .list-wrapper {
+        background-color: $skills-list-color;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        overflow: hidden;
+
+
+        @media screen and (max-width: $big-screen){
+            flex-direction: column;
+            padding: 0;
+        }
+
+        & .practice-areas {
+            flex-basis: 51rem;
+            padding-top: 3rem;
+            height: 25rem;
+            box-sizing: border-box;
+
+            @media screen and (max-width: $big-screen){
+                flex-basis: 100%;
+                height: 25rem;
+            }
+
+            @media screen and (min-width: $tablet-size) and (max-width: $big-screen) {
+                padding-left: 2rem;
+            }
+
+            &.expanded {
+                height: auto;
+            }
+        }
+
+        & p {
+           width: 100%; 
+           margin: 0;
+        }
+
+        & .show-all-btn {
+            flex-basis: 20%;
+        }
+    }
+}
+
+.show-all-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    color: $services-color;
+    text-align: center;
+    cursor: pointer;
+    align-self: stretch;
+    background-color: $skills-list-color2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $big-screen){
+        padding: 3rem;
+        z-index: 10;
+    }
+}

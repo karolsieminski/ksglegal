@@ -1,0 +1,20 @@
+.page-footer {
+    border-top: 1px solid $services-color3;
+    text-align: center;
+    padding: 2rem 0 2rem;
+    & p {
+        color: $services-color;
+    }
+
+    &__links {
+        color: $services-color2;
+
+        & a {
+            color: $services-color2;
+            text-decoration: none; 
+            font-size: 1.3rem;
+            padding: 0 0.7rem;
+        }
+
+    }
+}

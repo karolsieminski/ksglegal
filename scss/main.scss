@@ -1,0 +1,33 @@
+@import 'variables/colors';
+@import 'variables/sizes';
+
+@import 'common';
+@import 'sections/intro';
+@import 'sections/team';
+@import 'sections/services';
+@import 'sections/news';
+@import 'sections/contact';
+@import 'sections/footer';
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+.sticky {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+* {
+    outline: none !important;  
+}
+
+body {
+    overflow-x: hidden;
+}
+

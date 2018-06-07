@@ -1,0 +1,283 @@
+#intro-section {
+    background-image: url('../assets/banner_zdjecie.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    @media screen and (max-width: $tablet-size) {
+        background-position: 40rem 0px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        background-position: 15rem 0px;
+    }
+}
+
+.page-header {  
+    width: 100%;
+
+    & .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1rem;
+        align-items: center;
+
+        .logo {
+            @media screen and (max-width: $tablet-size){
+                align-self: flex-start;
+            }
+        }
+
+        @media screen and (max-width: $tablet-size) {
+            padding: 1rem;
+            background-color: white;
+            width: 100vw;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+    }
+
+    &.sticky .page-header-nav-list__item a {
+        background-color: white;
+        color: $menu-text-colour;
+    }
+
+    &-nav {
+        @media screen and (max-width: $tablet-size) {
+            display: none;
+        }
+
+        &.expanded {
+            @media screen and (max-width: $tablet-size){
+                display: initial;
+                width: 100%;
+            }
+        }
+
+        &.expanded &-list {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &-nav-list {
+        display: flex;
+        list-style-type: none;
+        &__item {
+            position: relative;
+
+            & a {
+                box-sizing: border-box;
+                font-weight: bold;
+                font-size: 1.3rem;
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: $menu-text-colour;
+                padding: 1rem 1.2rem;
+                padding: 1rem 3rem;
+                text-align: center;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $menu-hover-colour;
+                    color: $tile-text-color;
+                }
+            }
+      
+        }
+
+        &__item:hover {
+            background-color: $menu-hover-colour;
+
+            & a {
+                color: $tile-text-color;
+            }
+        }
+        &__item:hover > &-nested {
+            display: block;
+
+            & a:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        &-nested {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: -15rem;
+            list-style-type: none;
+            z-index: 1000;
+            & a {
+                background-color: $menu-hover-colour;
+                color: $tile-text-color;  
+                text-align: left;  
+
+                & img {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &-nested.visible {
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 19rem;
+
+            & a {
+                text-transform: none;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+
+.info-container {
+    box-sizing: border-box;
+    padding: 19rem 9rem;
+    width: 60%;
+    color: $services-color;
+    position: relative;
+
+    @media screen and (max-width: $tablet-size){
+        padding: 8em 2rem;
+    }
+
+    @media screen and (max-width: $small-screen){
+        padding: 3em 2rem;
+        width: 85%;
+    }
+
+    &__heading {
+        width: 100%;
+        font-size: 6.2rem;
+        margin: 0;
+        margin-bottom: 2rem;
+        @media screen and (max-width: $tablet-size){
+            font-size: 3.5rem;
+        }
+        @media screen and (max-width: $small-screen){
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 3.5rem;
+        line-height: 1;
+
+        @media screen and (max-width: $tablet-size){
+            margin-bottom: initial;
+            line-height: initial;
+            width: 34rem;
+        }
+
+        @media screen and (max-width: $small-screen){
+            width: 100%;
+            font-size: 1.6rem;
+        }
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: 95%;
+        width: 40rem;
+        height: 1rem;
+        background-color: $services-color;
+
+        @media screen and (min-width: $tablet-size) and (max-width: $big-screen) {
+            width: 30rem;
+            top: 80%;
+        }
+
+        @media screen and (max-width: $tablet-size) {
+            width: 20rem;
+            top: 80%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 20rem;
+            top: 105%;
+            left: 35%;
+            height: 0.6rem;
+        }
+    }
+
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        width: 40rem;
+        height: 1rem;
+        background-color: $btn-color;
+
+        @media screen and (min-width: $tablet-size) and (max-width: $big-screen) {
+            width: 30rem;
+            top: 85%;
+        }
+
+        @media screen and (max-width: $tablet-size) {
+            width: 20rem;
+            top: 85%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 20rem;
+            top: 110%;
+            left: 25%;
+            height: 0.6rem;
+        }
+        
+    }
+
+    & .btn {
+        margin-top: 8rem;
+
+        // @media screen and (max-width: $tablet-size){
+        //     margin-top: 4rem;
+        // }
+    }
+}
+
+
+#about  {
+
+    & > .section-bar {
+        background-image: url("../../assets/onas_naglowek_bg.png");
+    }
+
+    & .text-wrapper {
+        @media screen and (max-width: $tablet-size) {
+            padding: 5rem 1rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+ .hamburger-btn {
+    color: black;
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+
+    @media screen and (min-width: $tablet-size) {
+        display: none;
+    }
+}

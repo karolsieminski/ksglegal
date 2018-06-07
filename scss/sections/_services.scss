@@ -1,0 +1,213 @@
+#services {
+    padding-bottom: 4rem;
+    & > .section-bar {
+        background-image: url("../../assets/uslugi_naglowek_bg.png");
+    }
+
+    .skills-list {
+        display: none;
+        
+        &.expanded {
+            display: flex;
+        }
+
+        &--smaller {
+            @media screen and (max-width: $tablet-size){
+                max-width: 50rem;
+            }
+        }
+    }
+}
+
+
+.grid {
+    width: 118.8rem;
+    margin: 12rem auto;
+
+    
+
+    @media screen and (max-width: $big-screen){
+        width: initial;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: $medium-screen){
+       margin: 6rem auto;
+    }
+
+    @media screen and (max-width: $small2-screen) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3.2rem;
+
+        @media screen and (max-width: $tablet-size) {
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: $tablet-size) and (max-width: $big-screen) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: $small-screen) and (max-width: $small2-screen) {
+            width: initial;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: initial;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 0;
+        }
+
+        &-4 {
+            @media screen and (max-width: $big-screen) {
+                order: 4;
+            } 
+        }
+    }
+
+    &-item {
+        width: 21.2rem;
+        height: 21.2rem;
+        background-color: $services-color;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+
+        @media screen and (max-width: $small-screen) {
+            width: 14rem;
+            height: 14rem;
+            margin-top: 2rem;
+        }
+
+        @media screen and (min-width: $small-screen) and (max-width: $small2-screen) {
+            margin-top: 3.2rem;
+        }
+
+        @media screen and (min-width: $tablet-size) and (max-width: $big-screen) {
+            margin-right: 3.2rem;
+        }
+
+        &__content {
+            background-color: $services-color;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 24.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            display: none;
+            pointer-events: none;
+
+
+            &.showed {
+                display: flex;
+                z-index: 1000;
+                @media screen and (max-width: $tablet-size){
+                    animation-name: show-content-on-smaller-device;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+
+                @media screen and (max-width: $small2-screen) {
+                    padding: 0.5rem;
+                }
+
+                animation-name: show-content;
+                animation-duration: 0.3s;
+                animation-fill-mode: forwards;
+            }
+
+            &.hide {
+                animation-name: hide-content;
+                animation-duration: 0.3s;
+                animation-fill-mode: forwards;
+            }
+
+            p {
+                font-weight: normal;
+                font-size: 1.4rem;
+
+                @media screen and (max-width: $small2-screen) {
+                    font-size: 1rem;
+                }
+            }
+            & span {
+                align-self: flex-end;
+                transform: translateX(-1rem);
+            }
+        }
+
+        &--hidden {
+           visibility: hidden;
+
+           @media screen and (max-width: $big-screen){
+                display: none;
+           }
+        }
+
+        &--color2 {
+            background-color: $services-color2;
+
+            & .grid-item__content {
+                background-color: $services-color2;
+            }
+        }
+
+        &--color3 {
+            background-color: $services-color3;
+
+            & .grid-item__content {
+                background-color: $services-color3;
+            }
+        }
+    }
+}
+
+    
+@keyframes show-content {
+    from {
+        opacity: 0;
+        left: 0;
+    }
+
+    to {
+        opacity: 1;
+        left: 100%;
+    }
+}
+
+
+@keyframes show-content-on-smaller-device {
+    from {
+        opacity: 0;       
+    }
+
+    to {
+        opacity: 1;
+    }
+}
