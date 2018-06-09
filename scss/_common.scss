@@ -107,5 +107,11 @@ body {
         flex-basis: 50%;
         padding-left: 1rem;
         box-sizing: border-box;
+
+        @media screen and (max-width: 492px) {
+            flex-basis: 45%;
+            font-size: 1.2rem;
+            padding-left: 0;
+        }
     }
 }

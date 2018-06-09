@@ -78,6 +78,12 @@
             @media screen and (max-width: $big-screen) {
                 order: 4;
             } 
+
+            & .grid-item {
+                @media screen and (min-width: $small2-screen) and (max-width: 1109px) {
+                    margin-top: 2.6rem;
+                }
+            }
         }
     }
 
@@ -120,8 +126,10 @@
             justify-content: center;
             text-align: left;
             display: none;
-            pointer-events: none;
 
+            & a {
+                color: white;
+            }
 
             &.showed {
                 display: flex;

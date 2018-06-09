@@ -216,6 +216,12 @@
             left: 35%;
             height: 0.6rem;
         }
+
+        @media screen and (min-width: $small-screen) and (max-width: 470px) {
+            width: 20rem;
+            top: 85%;
+            left: 50%;
+        }
     }
 
     &::before {
@@ -243,6 +249,12 @@
             top: 110%;
             left: 25%;
             height: 0.6rem;
+        }
+
+        @media screen and (min-width: $small-screen) and (max-width: 470px) {
+            width: 20rem;
+            top: 90%;
+            left: 60%;
         }
         
     }

@@ -98,6 +98,12 @@ body {
     padding-left: 1rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    @media screen and (max-width: 492px) {
+      .skills-list__item {
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+        font-size: 1.2rem;
+        padding-left: 0; } }
 
 #intro-section {
   background-image: url("../assets/banner_zdjecie.jpg");
@@ -280,6 +286,11 @@ body {
         top: 105%;
         left: 35%;
         height: 0.6rem; } }
+    @media screen and (min-width: 372px) and (max-width: 470px) {
+      .info-container::after {
+        width: 20rem;
+        top: 85%;
+        left: 50%; } }
   .info-container::before {
     display: block;
     content: '';
@@ -303,6 +314,11 @@ body {
         top: 110%;
         left: 25%;
         height: 0.6rem; } }
+    @media screen and (min-width: 372px) and (max-width: 470px) {
+      .info-container::before {
+        width: 20rem;
+        top: 90%;
+        left: 60%; } }
   .info-container .btn {
     margin-top: 8rem; }
 
@@ -420,6 +436,8 @@ body {
         -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; } }
+  .team-member__contact a {
+    color: black; }
   @media screen and (max-width: 1667px) {
     .team-member__contact {
       display: -webkit-box;
@@ -671,6 +689,9 @@ body {
         -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
         order: 4; } }
+    @media screen and (min-width: 640px) and (max-width: 1109px) {
+      .grid-row-4 .grid-item {
+        margin-top: 2.6rem; } }
   .grid-item {
     width: 21.2rem;
     height: 21.2rem;
@@ -718,8 +739,9 @@ body {
       -ms-flex-pack: center;
       justify-content: center;
       text-align: left;
-      display: none;
-      pointer-events: none; }
+      display: none; }
+      .grid-item__content a {
+        color: white; }
       .grid-item__content.showed {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -822,6 +844,17 @@ body {
   .articles-list-item {
     position: relative;
     margin: 4rem 0; }
+    .articles-list-item__text ul {
+      list-style-type: none; }
+    .articles-list-item__text ul li {
+      position: relative; }
+      .articles-list-item__text ul li::before {
+        content: '-';
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        top: 0;
+        left: -2rem; }
     .articles-list-item::before {
       position: absolute;
       top: 0.5rem;
@@ -891,6 +924,8 @@ body {
         flex-direction: column;
         width: 100%;
         text-align: center; } }
+    .contact-details a {
+      color: black; }
     .contact-details p {
       margin: 1rem 0; }
 

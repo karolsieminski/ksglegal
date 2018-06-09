@@ -101,7 +101,9 @@
 
     &__contact {
 
-        
+        & a {
+            color: black;
+        }
 
         @media screen and (max-width: $big-screen) {
             display: flex;
