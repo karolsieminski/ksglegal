@@ -7,8 +7,10 @@
         left: 0;
 
         &__heading {
-            width: initial;
-            text-align: left;
+            @media screen and (max-width: $medium-screen){
+                width: initial;
+                text-align: left;
+            }
         }
     }
 
@@ -24,6 +26,10 @@
             flex-direction: column;
             width: 100%;
             text-align: center;
+        }
+
+        & a {
+            color: black;
         }
 
         & p {

@@ -57,8 +57,10 @@
         }
 
         &.expanded &-list {
-            flex-direction: column;
-            padding: 0;
+            @media screen and (max-width: $tablet-size) {
+                flex-direction: column;
+                padding: 0;
+            }
         }
     }
 
@@ -76,10 +78,13 @@
                 width: 100%;
                 text-decoration: none;
                 color: $menu-text-colour;
-                padding: 1rem 1.2rem;
                 padding: 1rem 3rem;
                 text-align: center;
                 text-transform: uppercase;
+
+                @media screen and (min-width: $tablet-size) and (max-width: $medium-screen) {
+                    padding: 1rem 1rem;
+                }
 
                 &:hover {
                     background-color: $menu-hover-colour;
@@ -213,6 +218,12 @@
             left: 35%;
             height: 0.6rem;
         }
+
+        @media screen and (min-width: $small-screen) and (max-width: 470px) {
+            width: 20rem;
+            top: 85%;
+            left: 50%;
+        }
     }
 
     &::before {
@@ -240,6 +251,12 @@
             top: 110%;
             left: 25%;
             height: 0.6rem;
+        }
+
+        @media screen and (min-width: $small-screen) and (max-width: 470px) {
+            width: 20rem;
+            top: 90%;
+            left: 60%;
         }
         
     }
