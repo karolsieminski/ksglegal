@@ -177,7 +177,7 @@ body {
       .page-header-nav-list__item a {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 1.3rem;
         display: block;
         width: 100%;
@@ -956,10 +956,14 @@ body {
   background-color: white;
   top: 0;
   width: 100%;
-  z-index: 9999; }
+  z-index: 9999;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
 
 * {
   outline: none !important; }
 
 body {
   overflow-x: hidden; }
+
+/*# sourceMappingURL=main.css.map */
